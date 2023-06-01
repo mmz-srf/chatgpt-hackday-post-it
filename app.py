@@ -5,11 +5,11 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def form():
     message = '''
-    Du bist ein {PLATFORM}-Experte.
+    Du bist ein {PLATTFORM}-Experte.
     Kannst du bitte aus folgenden Text 
-    {VARIANTEN} Varianten für ein
+    {VARIANTEN_ZAHL} Varianten für ein
     {OUTPUT_FORMAT}
-    mit {LENGTH} Zeichen
+    mit {LAENGE} Zeichen
     für ein {ZIELGRUPPE} Publikum 
     auf {SPRACHE} 
     mit einer {PERSPEKTIVE} Perspektive erzeugen
@@ -25,7 +25,15 @@ def form():
         length = request.form.get('length')
         text = request.form.get('text')
 
-        message = message.format(PLATFORM=plattform, ZIELGRUPPE=zielgruppe, SPRACHE=sprache, PERSPEKTIVE=perspektive, VARIANTEN=varianten, OUTPUT_FORMAT=format_, TEXT=text, LENGTH=length)
+        message = message.format(
+            PLATTFORM=plattform,
+            ZIELGRUPPE=zielgruppe,
+            SPRACHE=sprache,
+            PERSPEKTIVE=perspektive,
+            VARIANTEN_ZAHL=varianten,
+            OUTPUT_FORMAT=format_,
+            TEXT=text, 
+            LAENGE=length)
 
     return render_template('form.html', message=message)
 
