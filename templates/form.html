@@ -5,14 +5,14 @@
 </head>
 <body>
     <form method="POST">
-        Plattform: <input type="text" name="plattform"><br>
-        Zielgruppe: <input type="text" name="zielgruppe"><br>
-        Sprache: <input type="text" name="sprache"><br>
-        Perspektive: <input type="text" name="perspektive"><br>
-        Zahl Varianten: <input type="text" name="varianten"><br>
-        Länge: <input type="text" name="length"><br>
-        Format: <input type="text" name="format"><br>
-        Text: <textarea name="text" rows="4" cols="50"></textarea><br>
+        Plattform: <input type="text" name="plattform" value="{{ form_data.plattform }}"><br>
+        Zielgruppe: <input type="text" name="zielgruppe" value="{{ form_data.zielgruppe }}"><br>
+        Sprache: <input type="text" name="sprache" value="{{ form_data.sprache }}"><br>
+        Perspektive: <input type="text" name="perspektive" value="{{ form_data.perspektive }}"><br>
+        Länge: <input type="text" name="laenge" value="{{ form_data.laenge }}"><br>
+        Anzahl Varianten: <input type="text" name="varianten" value="{{ form_data.varianten }}"><br>
+        Format: <input type="text" name="format" value="{{ form_data.format }}"><br>
+        Text: <textarea name="text" rows="4" cols="50">{{ form_data.text }}</textarea><br>
         <input type="submit" value="Submit">
     </form>
     <p id="message">{{ message }}</p>

@@ -1,41 +1,40 @@
 from flask import Flask, request, render_template
+from string import Template
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def form():
-    message = '''
-    Du bist ein {PLATTFORM}-Experte.
+
+    form_data = {
+        "plattform": "",
+        "zielgruppe": "",
+        "sprache": "",
+        "perspektive": "",
+        "varianten": "",
+        "laenge": "",
+        "format": "",
+        "text": "",
+    }
+
+    message = Template('''
+    Du bist ein ${plattform}-Experte.
     Kannst du bitte aus folgenden Text 
-    {VARIANTEN_ZAHL} Varianten für ein
-    {OUTPUT_FORMAT}
-    mit {LAENGE} Zeichen
-    für ein {ZIELGRUPPE} Publikum 
-    auf {SPRACHE} 
-    mit einer {PERSPEKTIVE} Perspektive erzeugen
-    : [{TEXT}]'''
+    ${varianten} Varianten für ein
+    ${format}
+    mit ${laenge} Zeichen
+    für ein ${zielgruppe} Publikum 
+    auf ${sprache} 
+    mit einer ${perspektive} Perspektive erzeugen
+    : [${text}]''')
     
     if request.method == 'POST':
-        plattform = request.form.get('plattform')
-        zielgruppe = request.form.get('zielgruppe')
-        sprache = request.form.get('sprache')
-        perspektive = request.form.get('perspektive')
-        varianten = request.form.get('varianten')
-        format_ = request.form.get('format')
-        length = request.form.get('length')
-        text = request.form.get('text')
+        for field in form_data.keys():
+            form_data[field] = request.form.get(field)
 
-        message = message.format(
-            PLATTFORM=plattform,
-            ZIELGRUPPE=zielgruppe,
-            SPRACHE=sprache,
-            PERSPEKTIVE=perspektive,
-            VARIANTEN_ZAHL=varianten,
-            OUTPUT_FORMAT=format_,
-            TEXT=text, 
-            LAENGE=length)
+        message = message.substitute(form_data)
 
-    return render_template('form.html', message=message)
+    return render_template('form.html', message=message, form_data=form_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
