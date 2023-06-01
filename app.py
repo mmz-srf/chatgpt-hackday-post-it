@@ -19,14 +19,13 @@ def form():
 
     template = '''
     Du bist ein ${plattform}-Experte.
-    Kannst du bitte aus folgenden Text 
-    ${varianten} Varianten für ein
-    ${format}
+    Erzeuge ein ${format} in
+    ${varianten} Varianten
     mit ${laenge} Zeichen
     für ein ${zielgruppe} Publikum 
     auf ${sprache} 
-    mit einer ${perspektive} Perspektive erzeugen
-    : [${text}]'''
+    mit einer ${perspektive} Perspektive
+    aus folgendem Text: [${text}]'''
 
     message = template
     
