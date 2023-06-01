@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Parameters Form</title>
-</head>
+    <head>
+        <title>Parameters Form</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
 <body>
     <form method="POST">
         Plattform: <input type="text" name="plattform" value="{{ form_data.plattform }}"><br>
