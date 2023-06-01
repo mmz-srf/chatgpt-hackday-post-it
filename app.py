@@ -22,7 +22,7 @@ def form():
     Erzeuge ein ${format} in
     ${varianten} Varianten
     mit ${laenge} Zeichen
-    für ein ${zielgruppe} Publikum 
+    für eine ${zielgruppe} Zielgruppe
     auf ${sprache} 
     mit einer ${perspektive} Perspektive
     aus folgendem Text: [${text}]'''
