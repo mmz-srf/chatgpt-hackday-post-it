@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parameters Form</title>
+</head>
+<body>
+    <form method="POST">
+        Plattform: <input type="text" name="plattform"><br>
+        Zielgruppe: <input type="text" name="zielgruppe"><br>
+        Sprache: <input type="text" name="sprache"><br>
+        Perspektive: <input type="text" name="perspektive"><br>
+        Varianten: <input type="text" name="varianten"><br>
+        Format: <input type="text" name="format"><br>
+        Text: <input type="text" name="text"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>{{ message }}</p>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <script>
+        function copyToClipboard() {
+            var text = document.querySelector('p').innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+</html>
