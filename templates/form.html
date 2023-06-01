@@ -14,11 +14,11 @@
         Text: <textarea name="text" rows="4" cols="50"></textarea><br>
         <input type="submit" value="Submit">
     </form>
-    <p>{{ message }}</p>
+    <p id="message">{{ message }}</p>
     <button onclick="copyToClipboard()">Copy to Clipboard</button>
     <script>
         function copyToClipboard() {
-            var text = document.querySelector('p').innerText;
+            var text = document.querySelector('#message').innerText;
             navigator.clipboard.writeText(text);
         }
     </script>

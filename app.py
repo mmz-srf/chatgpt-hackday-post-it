@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def form():
-    message = ''
+    message = 'Plattform: {}, Zielgruppe: {}, Sprache: {}, Perspektive: {}, Varianten: {}, Format: {}, Text: {}'
     if request.method == 'POST':
         plattform = request.form.get('plattform')
         zielgruppe = request.form.get('zielgruppe')
@@ -14,7 +14,7 @@ def form():
         format_ = request.form.get('format')
         text = request.form.get('text')
 
-        message = f'Plattform: {plattform}, Zielgruppe: {zielgruppe}, Sprache: {sprache}, Perspektive: {perspektive}, Varianten: {varianten}, Format: {format_}, Text: {text}'
+        message = message.format(plattform, zielgruppe, sprache, perspektive, varianten, format_, text)
 
     return render_template('form.html', message=message)
 
