@@ -17,7 +17,7 @@ def form():
         "text": "",
     }
 
-    message = Template('''
+    template = '''
     Du bist ein ${plattform}-Experte.
     Kannst du bitte aus folgenden Text 
     ${varianten} Varianten für ein
@@ -26,13 +26,15 @@ def form():
     für ein ${zielgruppe} Publikum 
     auf ${sprache} 
     mit einer ${perspektive} Perspektive erzeugen
-    : [${text}]''')
+    : [${text}]'''
+
+    message = template
     
     if request.method == 'POST':
         for field in form_data.keys():
             form_data[field] = request.form.get(field)
 
-        message = message.substitute(form_data)
+        message = Template(template).substitute(form_data)
 
     return render_template('form.html', message=message, form_data=form_data)
 

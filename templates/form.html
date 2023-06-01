@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     </head>
 <body>
+    <div class="container">
     <form method="POST">
         Plattform: <input type="text" name="plattform" value="{{ form_data.plattform }}"><br>
         Zielgruppe: <input type="text" name="zielgruppe" value="{{ form_data.zielgruppe }}"><br>
@@ -16,8 +17,11 @@
         Text: <textarea name="text" rows="4" cols="50">{{ form_data.text }}</textarea><br>
         <input type="submit" value="Submit">
     </form>
+    <div class="message">
     <p id="message">{{ message }}</p>
     <button onclick="copyToClipboard()">Copy to Clipboard</button>
+</div>
+</div>
     <script>
         function copyToClipboard() {
             var text = document.querySelector('#message').innerText;

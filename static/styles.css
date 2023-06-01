@@ -44,3 +44,11 @@ button {
     cursor: pointer;
     text-transform: uppercase;
 }
+
+.container {
+    width: 500px;
+}
+
+.message {
+    margin-top: 20px;
+}
