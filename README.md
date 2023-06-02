@@ -10,7 +10,7 @@ The project was realized for the SRF ChatGPT Hackathon on 2023-06-03 with the id
 - Kornacher, Silja
 - Kurtogullari, Deniz
 - Leiser, Eliane
-- Schwerzmann, Jacquelin
+- Schwerzmann, Jacqueline
 
 ## Project Structure
 
