@@ -20,8 +20,8 @@ Team members
 │ └── form.html
 └── static
 └── styles.css
-└── README.txt
-└── LICENSE.txt
+└── README.md
+└── LICENSE
 ```
 
 
@@ -70,3 +70,10 @@ This project is licensed under the terms of the MIT license.
 
 # Screenshots
 
+With input text `examples/Text.txt`
+
+![Empty forms](examples/0_empty.png)
+![Filled forms](examples/1_filled.png)
+![ChatGPT output](examples/2_chatgpt.png)
+![Change language](examples/3_swissgerman.png)
+![Change perspective](examples/4_perspective.png)
