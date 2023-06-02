@@ -1,10 +1,10 @@
 # Post it! (by ChatGPT🤖)
 
-This is a simple (Flask)[https://flask.palletsprojects.com/] application that takes user input through a form, stores the form data in a session, and generates a promt message for ChatGPT based on the user input. The application also allows the user to copy the generated message to their clipboard to ease the copy-pasting into ChatGPT.
+This is a simple (Flask)[https://flask.palletsprojects.com/] application that takes user input through a form, stores the form data in a dictionary, and generates a promt message for ChatGPT based on the user input. The application also allows the user to copy the generated message to their clipboard to ease the copy-pasting into ChatGPT.
 
-The project was realized for the SRF ChatGPT Hackathon on 2023-06-03 with the idea to simplify writing Posts for Social Media (Twitter/Instagram etc.) starting from longer Agency Reports.
+The project was realized for the SRF ChatGPT Hackathon on 2023-06-03 with the idea to simplify writing Posts for Social Media (Twitter/Instagram etc.) starting from longer Agency Report ([Example](examples/Text.txt)).
 
-Team members
+## Team members
 - Bleuler, Nicole
 - Heller, Davide
 - Kornacher, Silja
@@ -57,20 +57,20 @@ export FLASK_APP=app.py
 flask run
 ```
 
-# Usage
+## Usage
 
 1. Fill in the form with your data.
 2. Click "Submit" to generate the promt message. The form inputs will persist even after the page is reloaded.
 3. Click "Copy to Clipboard" to copy the prompt message.
 4. Paste your prompt into ChatGPT to obtain the post suggestions.
 
-# License
+## License
 
 This project is licensed under the terms of the MIT license.
 
-# Screenshots
+## Screenshots
 
-With input text `examples/Text.txt`
+With input text [Example](examples/Text.txt)
 
 ![Empty forms](examples/0_empty.png)
 ![Filled forms](examples/1_filled.png)
