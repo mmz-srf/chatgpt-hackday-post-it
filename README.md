@@ -2,7 +2,7 @@
 
 This is a simple [Flask](https://flask.palletsprojects.com/) application that takes user input through a form, stores the form data in a dictionary, and generates a promt message for ChatGPT based on the user input. The application also allows the user to copy the generated message to their clipboard to ease the copy-pasting into ChatGPT.
 
-The project was realized for the SRF ChatGPT Hackathon on 2023-06-03 with the idea to simplify writing Posts for Social Media (Twitter/Instagram etc.) starting from longer Agency Report ([Example](examples/Text.txt)).
+The project was realized for the SRF ChatGPT Hackathon on 2023-06-03 with the idea to simplify writing Posts for Social Media (Twitter/Instagram etc.) starting from longer agency reports ([Example](examples/Text.txt)).
 
 ## Team members
 - Bleuler, Nicole
